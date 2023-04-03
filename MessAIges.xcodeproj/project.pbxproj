@@ -44,6 +44,8 @@
 		1C6335F629DB583500AFEFDB /* MessAIgesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessAIgesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6335FA29DB583500AFEFDB /* MessAIgesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessAIgesUITests.swift; sourceTree = "<group>"; };
 		1C6335FC29DB583500AFEFDB /* MessAIgesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessAIgesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1C6D787F29DB5FA400DC13DF /* APIKeys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKeys.xcconfig; sourceTree = "<group>"; };
+		1C6D788029DB600800DC13DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				1C63360929DB584C00AFEFDB /* Resources */,
 				1C6335DF29DB583400AFEFDB /* MessAIgesApp.swift */,
 				1C6335E329DB583500AFEFDB /* Assets.xcassets */,
+				1C6D787E29DB5F7000DC13DF /* Supporting Files */,
 				1C6335E529DB583500AFEFDB /* Preview Content */,
 			);
 			path = MessAIges;
@@ -181,6 +184,15 @@
 				1C6335E129DB583400AFEFDB /* HistoryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1C6D787E29DB5F7000DC13DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C6D788029DB600800DC13DF /* Info.plist */,
+				1C6D787F29DB5FA400DC13DF /* APIKeys.xcconfig */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +488,7 @@
 				DEVELOPMENT_TEAM = G6NTB33VYZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MessAIges/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -505,6 +518,7 @@
 				DEVELOPMENT_TEAM = G6NTB33VYZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MessAIges/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

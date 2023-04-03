@@ -1,0 +1,8 @@
+//
+//  APIKeys.xcconfig
+//  MessAIges
+//
+//  Created by Jakub Dąbrowski on 03/04/2023.
+//
+
+GPT_KEY = // Please, add your key from https://platform.openai.com/account/api-keys here.
