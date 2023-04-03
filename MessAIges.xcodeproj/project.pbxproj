@@ -14,6 +14,7 @@
 		1C6335F129DB583500AFEFDB /* MessAIgesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6335F029DB583500AFEFDB /* MessAIgesTests.swift */; };
 		1C6335FB29DB583500AFEFDB /* MessAIgesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6335FA29DB583500AFEFDB /* MessAIgesUITests.swift */; };
 		1C6335FD29DB583500AFEFDB /* MessAIgesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6335FC29DB583500AFEFDB /* MessAIgesUITestsLaunchTests.swift */; };
+		1C6D788329DB639300DC13DF /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788229DB639300DC13DF /* HistoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1C6335FC29DB583500AFEFDB /* MessAIgesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessAIgesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1C6D787F29DB5FA400DC13DF /* APIKeys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKeys.xcconfig; sourceTree = "<group>"; };
 		1C6D788029DB600800DC13DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C6D788229DB639300DC13DF /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,6 @@
 			children = (
 				1C63360A29DB585000AFEFDB /* Source Files */,
 				1C63360929DB584C00AFEFDB /* Resources */,
-				1C6335DF29DB583400AFEFDB /* MessAIgesApp.swift */,
 				1C6335E329DB583500AFEFDB /* Assets.xcassets */,
 				1C6D787E29DB5F7000DC13DF /* Supporting Files */,
 				1C6335E529DB583500AFEFDB /* Preview Content */,
@@ -151,6 +152,7 @@
 		1C63360B29DB586900AFEFDB /* Application Flow */ = {
 			isa = PBXGroup;
 			children = (
+				1C6335DF29DB583400AFEFDB /* MessAIgesApp.swift */,
 				1C63360E29DB58AF00AFEFDB /* History */,
 			);
 			path = "Application Flow";
@@ -173,6 +175,7 @@
 		1C63360E29DB58AF00AFEFDB /* History */ = {
 			isa = PBXGroup;
 			children = (
+				1C6D788129DB638200DC13DF /* ViewModels */,
 				1C63360F29DB58BD00AFEFDB /* Views */,
 			);
 			path = History;
@@ -193,6 +196,14 @@
 				1C6D787F29DB5FA400DC13DF /* APIKeys.xcconfig */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C6D788129DB638200DC13DF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1C6D788229DB639300DC13DF /* HistoryViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C6335E229DB583400AFEFDB /* HistoryView.swift in Sources */,
+				1C6D788329DB639300DC13DF /* HistoryViewModel.swift in Sources */,
 				1C6335E029DB583400AFEFDB /* MessAIgesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
