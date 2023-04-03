@@ -15,6 +15,9 @@
 		1C6335FB29DB583500AFEFDB /* MessAIgesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6335FA29DB583500AFEFDB /* MessAIgesUITests.swift */; };
 		1C6335FD29DB583500AFEFDB /* MessAIgesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6335FC29DB583500AFEFDB /* MessAIgesUITestsLaunchTests.swift */; };
 		1C6D788329DB639300DC13DF /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788229DB639300DC13DF /* HistoryViewModel.swift */; };
+		1C6D788729DB642000DC13DF /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788629DB642000DC13DF /* HistoryEntry.swift */; };
+		1C6D788A29DB654300DC13DF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788929DB654300DC13DF /* Message.swift */; };
+		1C6D788C29DB658E00DC13DF /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788B29DB658E00DC13DF /* Author.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		1C6D787F29DB5FA400DC13DF /* APIKeys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKeys.xcconfig; sourceTree = "<group>"; };
 		1C6D788029DB600800DC13DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C6D788229DB639300DC13DF /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		1C6D788629DB642000DC13DF /* HistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
+		1C6D788929DB654300DC13DF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1C6D788B29DB658E00DC13DF /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,7 @@
 		1C63360C29DB587300AFEFDB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1C6D788829DB653900DC13DF /* Models */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 		1C63360E29DB58AF00AFEFDB /* History */ = {
 			isa = PBXGroup;
 			children = (
+				1C6D788529DB641500DC13DF /* Models */,
 				1C6D788129DB638200DC13DF /* ViewModels */,
 				1C63360F29DB58BD00AFEFDB /* Views */,
 			);
@@ -204,6 +212,23 @@
 				1C6D788229DB639300DC13DF /* HistoryViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1C6D788529DB641500DC13DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C6D788629DB642000DC13DF /* HistoryEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C6D788829DB653900DC13DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C6D788929DB654300DC13DF /* Message.swift */,
+				1C6D788B29DB658E00DC13DF /* Author.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +384,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C6D788C29DB658E00DC13DF /* Author.swift in Sources */,
 				1C6335E229DB583400AFEFDB /* HistoryView.swift in Sources */,
+				1C6D788729DB642000DC13DF /* HistoryEntry.swift in Sources */,
+				1C6D788A29DB654300DC13DF /* Message.swift in Sources */,
 				1C6D788329DB639300DC13DF /* HistoryViewModel.swift in Sources */,
 				1C6335E029DB583400AFEFDB /* MessAIgesApp.swift in Sources */,
 			);
@@ -400,6 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		1C6335FE29DB583500AFEFDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C6D787F29DB5FA400DC13DF /* APIKeys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -460,6 +489,7 @@
 		};
 		1C6335FF29DB583500AFEFDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C6D787F29DB5FA400DC13DF /* APIKeys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
