@@ -20,6 +20,8 @@
 		1C6D788C29DB658E00DC13DF /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788B29DB658E00DC13DF /* Author.swift */; };
 		1C6D788E29DB668000DC13DF /* Authors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788D29DB668000DC13DF /* Authors.swift */; };
 		1C6D789329DB670C00DC13DF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789229DB670C00DC13DF /* ChatView.swift */; };
+		1C6D789529DB673200DC13DF /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789429DB673200DC13DF /* ChatViewModel.swift */; };
+		1C6D789829DB679700DC13DF /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C6D789729DB679700DC13DF /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		1C6D788B29DB658E00DC13DF /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		1C6D788D29DB668000DC13DF /* Authors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authors.swift; sourceTree = "<group>"; };
 		1C6D789229DB670C00DC13DF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		1C6D789429DB673200DC13DF /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C6D789829DB679700DC13DF /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +114,6 @@
 			children = (
 				1C63360A29DB585000AFEFDB /* Source Files */,
 				1C63360929DB584C00AFEFDB /* Resources */,
-				1C6335E329DB583500AFEFDB /* Assets.xcassets */,
 				1C6D787E29DB5F7000DC13DF /* Supporting Files */,
 				1C6335E529DB583500AFEFDB /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 		1C63360929DB584C00AFEFDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1C6335E329DB583500AFEFDB /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -257,6 +261,7 @@
 		1C6D789129DB670400DC13DF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1C6D789429DB673200DC13DF /* ChatViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -278,6 +283,9 @@
 			dependencies = (
 			);
 			name = MessAIges;
+			packageProductDependencies = (
+				1C6D789729DB679700DC13DF /* OpenAISwift */,
+			);
 			productName = MessAIges;
 			productReference = 1C6335DC29DB583400AFEFDB /* MessAIges.app */;
 			productType = "com.apple.product-type.application";
@@ -350,6 +358,9 @@
 				Base,
 			);
 			mainGroup = 1C6335D329DB583400AFEFDB;
+			packageReferences = (
+				1C6D789629DB679700DC13DF /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 1C6335DD29DB583400AFEFDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -421,6 +432,7 @@
 				1C6D789329DB670C00DC13DF /* ChatView.swift in Sources */,
 				1C6D788A29DB654300DC13DF /* Message.swift in Sources */,
 				1C6D788329DB639300DC13DF /* HistoryViewModel.swift in Sources */,
+				1C6D789529DB673200DC13DF /* ChatViewModel.swift in Sources */,
 				1C6335E029DB583400AFEFDB /* MessAIgesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,6 +764,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C6D789629DB679700DC13DF /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C6D789729DB679700DC13DF /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C6D789629DB679700DC13DF /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C6335D429DB583400AFEFDB /* Project object */;
 }
