@@ -11,7 +11,9 @@ import SwiftUI
 struct MessAIgesApp: App {
     var body: some Scene {
         WindowGroup {
-            HistoryView()
+            NavigationView {
+                HistoryView()
+            }
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Message {
-    let author: Author
+    let author: Authors
     let text: String
     let date: Date
 }
