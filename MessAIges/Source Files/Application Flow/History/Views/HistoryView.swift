@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HistoryView.swift
 //  MessAIges
 //
 //  Created by Jakub Dąbrowski on 03/04/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HistoryView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +19,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HistoryView()
     }
 }
