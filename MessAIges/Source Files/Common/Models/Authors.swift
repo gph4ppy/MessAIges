@@ -19,4 +19,13 @@ enum Authors {
             return Author(name: "User", avatar: nil)
         }
     }
+
+    var bubbleStyling: BubbleStyling {
+        switch self {
+        case .chat:
+            return BubbleStyling(color: .blue, paddingEdge: .trailing, alignment: .leading)
+        case .user:
+            return BubbleStyling(color: .gray, paddingEdge: .leading, alignment: .trailing)
+        }
+    }
 }
