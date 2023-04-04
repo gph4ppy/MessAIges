@@ -10,4 +10,8 @@ import Foundation
 @MainActor
 final class HistoryViewModel: ObservableObject {
     var chats: [HistoryEntry] = []
+
+    func fetchHistory() {
+
+    }
 }

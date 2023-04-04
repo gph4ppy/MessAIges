@@ -20,11 +20,9 @@ struct ChatView: View {
 
             TextField("Type your message here...", text: $viewModel.query)
                 .textFieldStyle(.roundedBorder)
-                .onSubmit {
-                    Task(priority: .userInitiated, operation: viewModel.send)
-                }
+                .onSubmit { viewModel.sendMessage() }
+                .submitLabel(.send)
         }
-        .padding(.horizontal, 16)
-        .task(viewModel.setup)
+        .padding(16)
     }
 }

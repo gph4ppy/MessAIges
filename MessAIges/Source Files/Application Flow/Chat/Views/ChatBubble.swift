@@ -12,7 +12,7 @@ struct ChatBubble: View {
     let author: Authors
 
     var body: some View {
-        VStack(spacing: 4) {
+        VStack(spacing: 6) {
             Text(author.data.name)
                 .font(.footnote)
                 .foregroundColor(.gray)
@@ -20,18 +20,28 @@ struct ChatBubble: View {
                 .padding(.horizontal, 16)
 
             Text(message)
-                .padding()
+                .padding(16)
                 .background(author.bubbleStyling.color)
                 .foregroundColor(.white)
-                .clipShape(Capsule())
+                .clipShape(ChatBubbleShape(direction: direction))
                 .frame(maxWidth: .infinity, alignment: author.bubbleStyling.alignment)
-                .padding(author.bubbleStyling.paddingEdge, 32)
+        }
+        .padding(author.bubbleStyling.paddingEdge, 32)
+    }
+
+    // TODO: - Think where I can move it
+    private var direction: ChatBubbleShape.Direction {
+        switch author {
+        case .chat:
+            return .left
+        case .user:
+            return .right
         }
     }
 }
 
 struct UserChatBubble_Previews: PreviewProvider {
     static var previews: some View {
-        ChatBubble(message: "Test message 123", author: .chat)
+        ChatBubble(message: "Test", author: .chat)
     }
 }

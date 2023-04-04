@@ -10,28 +10,43 @@ import ChatGPTSwift
 
 @MainActor
 final class ChatViewModel: ObservableObject {
-    @Published var query: String = ""
-    @Published var messages: [Message] = []
-    private var client: ChatGPTAPI?
+    @Published var query: String
+    @Published var messages: [Message]
 
-    @Sendable func setup() async {
-        guard let token = Bundle.main.infoDictionary?["GPT_API_KEY"] as? String else { return }
-        client = ChatGPTAPI(apiKey: token)
+    private var apiService: APIServiceProtocol
+
+    init(
+        query: String = "",
+        messages: [Message] = [],
+        apiService: APIServiceProtocol = ApplicationServices.shared.apiService
+    ) {
+        self.query = query
+        self.messages = messages
+        self.apiService = apiService
     }
 
-    @Sendable func send() async {
-        guard !query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+    func sendMessage() {
+        storeUserMessage()
+        storeChatMessage()
+    }
+
+    private func storeUserMessage() {
         let userMessage = Message(author: .user, text: query, date: Date())
         messages.append(userMessage)
+    }
 
-        do {
-            guard let response = try await client?.sendMessage(text: query) else { return }
-            let chatMessage = Message(author: .chat, text: response, date: Date())
-            self.messages.append(chatMessage)
-            query = ""
-        } catch {
-            dump(error.localizedDescription)
-            // TODO: Error Handling
+    private func storeChatMessage() {
+        Task(priority: .userInitiated) {
+            await apiService.sendMessage(text: query) { [weak self] response in
+                guard let self else { return }
+                let chatMessage = Message(author: .chat, text: response, date: Date())
+                self.messages.append(chatMessage)
+                self.clearQuery()
+            }
         }
+    }
+
+    private func clearQuery() {
+        query = ""
     }
 }

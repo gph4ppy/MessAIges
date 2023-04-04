@@ -24,6 +24,9 @@
 		1C6D789A29DB6AB400DC13DF /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789929DB6AB400DC13DF /* ChatBubble.swift */; };
 		1C6D789D29DB6F3600DC13DF /* BubbleStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789C29DB6F3600DC13DF /* BubbleStyling.swift */; };
 		1C6D78A029DB759D00DC13DF /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C6D789F29DB759D00DC13DF /* ChatGPTSwift */; };
+		1C83A96E29DCC6AC00A651DC /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A96D29DCC6AC00A651DC /* ChatBubbleShape.swift */; };
+		1C83A97029DCC85D00A651DC /* ApplicationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A96F29DCC85D00A651DC /* ApplicationServices.swift */; };
+		1C83A97229DCC88500A651DC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A97129DCC88500A651DC /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		1C6D789429DB673200DC13DF /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		1C6D789929DB6AB400DC13DF /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		1C6D789C29DB6F3600DC13DF /* BubbleStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStyling.swift; sourceTree = "<group>"; };
+		1C83A96D29DCC6AC00A651DC /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
+		1C83A96F29DCC85D00A651DC /* ApplicationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServices.swift; sourceTree = "<group>"; };
+		1C83A97129DCC88500A651DC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,7 @@
 		1C63360D29DB587900AFEFDB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1C83A96D29DCC6AC00A651DC /* ChatBubbleShape.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -239,6 +246,7 @@
 		1C6D788829DB653900DC13DF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1C83A97329DCC93400A651DC /* Services */,
 				1C6D788929DB654300DC13DF /* Message.swift */,
 				1C6D788B29DB658E00DC13DF /* Author.swift */,
 				1C6D788D29DB668000DC13DF /* Authors.swift */,
@@ -286,6 +294,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C83A97329DCC93400A651DC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1C83A96F29DCC85D00A651DC /* ApplicationServices.swift */,
+				1C83A97129DCC88500A651DC /* APIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,15 +466,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C6D788C29DB658E00DC13DF /* Author.swift in Sources */,
+				1C83A96E29DCC6AC00A651DC /* ChatBubbleShape.swift in Sources */,
 				1C6335E229DB583400AFEFDB /* HistoryView.swift in Sources */,
 				1C6D788729DB642000DC13DF /* HistoryEntry.swift in Sources */,
 				1C6D789D29DB6F3600DC13DF /* BubbleStyling.swift in Sources */,
 				1C6D788E29DB668000DC13DF /* Authors.swift in Sources */,
 				1C6D789329DB670C00DC13DF /* ChatView.swift in Sources */,
 				1C6D788A29DB654300DC13DF /* Message.swift in Sources */,
+				1C83A97229DCC88500A651DC /* APIService.swift in Sources */,
 				1C6D789A29DB6AB400DC13DF /* ChatBubble.swift in Sources */,
 				1C6D788329DB639300DC13DF /* HistoryViewModel.swift in Sources */,
 				1C6D789529DB673200DC13DF /* ChatViewModel.swift in Sources */,
+				1C83A97029DCC85D00A651DC /* ApplicationServices.swift in Sources */,
 				1C6335E029DB583400AFEFDB /* MessAIgesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
