@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Message {
+struct Message: Identifiable {
     let author: Authors
     let text: String
     let date: Date
+    let id: UUID = UUID()
 }

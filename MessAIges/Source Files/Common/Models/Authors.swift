@@ -16,7 +16,7 @@ enum Authors {
         case .chat:
             return Author(name: "AI", avatar: nil)
         case .user:
-            return Author(name: "User", avatar: nil)
+            return Author(name: "You", avatar: nil)
         }
     }
 

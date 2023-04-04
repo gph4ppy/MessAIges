@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct ChatView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @StateObject var viewModel: ChatViewModel
 
-struct ChatView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView()
+    var body: some View {
+        VStack {
+            ScrollView {
+                ForEach(viewModel.messages) { message in
+                    ChatBubble(message: message.text, author: message.author)
+                }
+            }
+
+            TextField("Type your message here...", text: $viewModel.query)
+                .textFieldStyle(.roundedBorder)
+                .onSubmit {
+                    Task(priority: .userInitiated, operation: viewModel.send)
+                }
+        }
+        .padding(.horizontal, 16)
+        .task(viewModel.setup)
     }
 }

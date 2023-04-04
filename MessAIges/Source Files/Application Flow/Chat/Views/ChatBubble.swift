@@ -12,13 +12,21 @@ struct ChatBubble: View {
     let author: Authors
 
     var body: some View {
-        Text(message)
-            .padding()
-            .background(author.bubbleStyling.color)
-            .foregroundColor(.white)
-            .clipShape(Capsule())
-            .frame(maxWidth: .infinity, alignment: author.bubbleStyling.alignment)
-            .padding(author.bubbleStyling.paddingEdge, 32)
+        VStack(spacing: 4) {
+            Text(author.data.name)
+                .font(.footnote)
+                .foregroundColor(.gray)
+                .frame(maxWidth: .infinity, alignment: author.bubbleStyling.alignment)
+                .padding(.horizontal, 16)
+
+            Text(message)
+                .padding()
+                .background(author.bubbleStyling.color)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
+                .frame(maxWidth: .infinity, alignment: author.bubbleStyling.alignment)
+                .padding(author.bubbleStyling.paddingEdge, 32)
+        }
     }
 }
 

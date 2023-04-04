@@ -21,9 +21,9 @@
 		1C6D788E29DB668000DC13DF /* Authors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788D29DB668000DC13DF /* Authors.swift */; };
 		1C6D789329DB670C00DC13DF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789229DB670C00DC13DF /* ChatView.swift */; };
 		1C6D789529DB673200DC13DF /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789429DB673200DC13DF /* ChatViewModel.swift */; };
-		1C6D789829DB679700DC13DF /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C6D789729DB679700DC13DF /* OpenAISwift */; };
 		1C6D789A29DB6AB400DC13DF /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789929DB6AB400DC13DF /* ChatBubble.swift */; };
 		1C6D789D29DB6F3600DC13DF /* BubbleStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789C29DB6F3600DC13DF /* BubbleStyling.swift */; };
+		1C6D78A029DB759D00DC13DF /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C6D789F29DB759D00DC13DF /* ChatGPTSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C6D789829DB679700DC13DF /* OpenAISwift in Frameworks */,
+				1C6D78A029DB759D00DC13DF /* ChatGPTSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +100,7 @@
 				1C6335EF29DB583500AFEFDB /* MessAIgesTests */,
 				1C6335F929DB583500AFEFDB /* MessAIgesUITests */,
 				1C6335DD29DB583400AFEFDB /* Products */,
+				1C83A96A29DCB40900A651DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,6 +281,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1C83A96A29DCB40900A651DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,7 +306,7 @@
 			);
 			name = MessAIges;
 			packageProductDependencies = (
-				1C6D789729DB679700DC13DF /* OpenAISwift */,
+				1C6D789F29DB759D00DC13DF /* ChatGPTSwift */,
 			);
 			productName = MessAIges;
 			productReference = 1C6335DC29DB583400AFEFDB /* MessAIges.app */;
@@ -374,6 +382,7 @@
 			mainGroup = 1C6335D329DB583400AFEFDB;
 			packageReferences = (
 				1C6D789629DB679700DC13DF /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				1C6D789E29DB759D00DC13DF /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
 			);
 			productRefGroup = 1C6335DD29DB583400AFEFDB /* Products */;
 			projectDirPath = "";
@@ -790,13 +799,21 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		1C6D789E29DB759D00DC13DF /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1C6D789729DB679700DC13DF /* OpenAISwift */ = {
+		1C6D789F29DB759D00DC13DF /* ChatGPTSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1C6D789629DB679700DC13DF /* XCRemoteSwiftPackageReference "OpenAISwift" */;
-			productName = OpenAISwift;
+			package = 1C6D789E29DB759D00DC13DF /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

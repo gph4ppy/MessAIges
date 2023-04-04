@@ -12,7 +12,8 @@ struct MessAIgesApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                HistoryView()
+//                HistoryView()
+                ChatView(viewModel: .init())
             }
         }
     }
