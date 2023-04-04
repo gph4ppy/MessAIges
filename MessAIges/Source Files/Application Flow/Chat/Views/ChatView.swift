@@ -21,7 +21,7 @@ struct ChatView: View {
             } else {
                 ScrollView {
                     ForEach(viewModel.messages) { message in
-                        ChatBubble(message: message.text, author: message.author)
+                        ChatBubble(content: .message(message.text), author: message.author)
                     }
                 }
             }

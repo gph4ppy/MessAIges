@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct HistoryEntry {
-    let id: UUID
-    let date: Date
+struct HistoryEntry: Identifiable {
+    let id: UUID = UUID()
     let messages: [Message]
 }
