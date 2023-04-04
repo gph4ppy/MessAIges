@@ -12,9 +12,17 @@ struct ChatView: View {
 
     var body: some View {
         VStack {
-            ScrollView {
-                ForEach(viewModel.messages) { message in
-                    ChatBubble(message: message.text, author: message.author)
+            if viewModel.messages.isEmpty {
+                Text("Welcome in a new chat! Please, type a message in a TextField below.")
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .frame(maxHeight: .infinity)
+            } else {
+                ScrollView {
+                    ForEach(viewModel.messages) { message in
+                        ChatBubble(message: message.text, author: message.author)
+                    }
                 }
             }
 

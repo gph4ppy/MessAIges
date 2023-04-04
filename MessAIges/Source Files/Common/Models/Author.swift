@@ -9,5 +9,4 @@ import Foundation
 
 struct Author {
     let name: String
-    let avatar: Data?
 }

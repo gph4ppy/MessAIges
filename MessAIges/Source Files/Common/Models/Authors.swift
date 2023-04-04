@@ -14,9 +14,9 @@ enum Authors {
     var data: Author {
         switch self {
         case .chat:
-            return Author(name: "AI", avatar: nil)
+            return Author(name: "AI")
         case .user:
-            return Author(name: "You", avatar: nil)
+            return Author(name: "You")
         }
     }
 
