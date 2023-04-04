@@ -1,5 +1,5 @@
 # MessAIges
-A Messages-like app using ChatGPT
+A Messages-like app using ChatGPT API
 
 # Installation
 1. Clone the repository.
