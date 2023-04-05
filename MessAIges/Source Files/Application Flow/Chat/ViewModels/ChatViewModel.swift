@@ -12,6 +12,7 @@ import ChatGPTSwift
 final class ChatViewModel: ObservableObject {
     @Published var query: String
     @Published var messages: [Message]
+
     private var apiService: APIServiceProtocol
 
     init(
