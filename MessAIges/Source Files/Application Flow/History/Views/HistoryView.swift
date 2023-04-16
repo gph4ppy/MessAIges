@@ -22,6 +22,7 @@ struct HistoryView: View {
                             Text(chat.historyDate.toString())
                         }
                     }
+                    .onDelete(perform: viewModel.removeHistory)
                 }
             }
         }

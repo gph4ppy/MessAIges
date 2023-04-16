@@ -14,8 +14,13 @@ protocol ApplicationServicesProtocol {
 final class ApplicationServices: ApplicationServicesProtocol {
     static let shared = ApplicationServices()
     var apiService: APIServiceProtocol
+    var historyManager: HistoryManagerProtocol
 
-    init(apiService: APIServiceProtocol = APIService()) {
+    init(
+        apiService: APIServiceProtocol = APIService(),
+        historyManager: HistoryManagerProtocol = HistoryManager()
+    ) {
         self.apiService = apiService
+        self.historyManager = historyManager
     }
 }

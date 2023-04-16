@@ -84,5 +84,6 @@ final class HistoryManager: HistoryManagerProtocol {
 
     func remove(history: HistoryEntity) {
         PersistenceManager.shared.removeData(object: history)
+        PersistenceManager.shared.saveContext()
     }
 }
