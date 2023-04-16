@@ -8,19 +8,32 @@
 import SwiftUI
 
 struct HistoryView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @StateObject var viewModel: HistoryViewModel = HistoryViewModel()
 
-struct HistoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        HistoryView()
+    var body: some View {
+        Group {
+            if viewModel.chats.isEmpty {
+                NoDataLabel(text: "No chats found - please, tap on the plus icon in the upper right corner")
+            } else {
+                List {
+                    ForEach(viewModel.chats, id: \.historyID) { chat in
+                        VStack {
+                            Text(chat.historyID.uuidString).bold()
+                            Text(chat.historyDate.toString())
+                        }
+                    }
+                }
+            }
+        }
+        .onAppear(perform: viewModel.fetchHistory)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink {
+                    ChatView(viewModel: ChatViewModel())
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
     }
 }

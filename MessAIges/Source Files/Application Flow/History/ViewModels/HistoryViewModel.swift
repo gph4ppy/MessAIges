@@ -9,9 +9,13 @@ import Foundation
 
 @MainActor
 final class HistoryViewModel: ObservableObject {
-    var chats: [HistoryEntry] = []
+    @Published var chats: [History] = []
 
     func fetchHistory() {
-
+        let request = HistoryEntity.fetchRequest()
+        let data = PersistenceManager.shared.fetchData(request: request)
+        DispatchQueue.main.async { [weak self] in
+            self?.chats = data
+        }
     }
 }
