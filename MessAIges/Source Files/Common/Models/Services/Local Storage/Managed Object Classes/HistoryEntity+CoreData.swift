@@ -16,6 +16,7 @@ public class HistoryEntity: NSManagedObject {
     }
 
     @NSManaged public var id: UUID?
+    @NSManaged public var title: String?
     @NSManaged public var date: Date?
     @NSManaged public var messages: NSOrderedSet?
 }
@@ -56,6 +57,10 @@ extension HistoryEntity {
 extension HistoryEntity: History {
     var historyID: UUID {
         id ?? UUID()
+    }
+
+    var historyTitle: String {
+        title ?? ""
     }
 
     var historyDate: Date {

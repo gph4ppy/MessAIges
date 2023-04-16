@@ -3,6 +3,7 @@
     <entity name="HistoryEntity" representedClassName="HistoryEntity" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="MessagesEntity" inverseName="history" inverseEntity="MessagesEntity"/>
     </entity>
     <entity name="MessagesEntity" representedClassName="MessagesEntity" syncable="YES">
