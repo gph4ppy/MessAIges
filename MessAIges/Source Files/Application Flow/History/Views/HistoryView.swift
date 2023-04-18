@@ -36,7 +36,7 @@ struct HistoryView: View {
 
     private func createHistoryRow(of chat: History) -> some View {
         NavigationLink {
-            let viewModel = ChatViewModel(messages: chat.historyMessages)
+            let viewModel = ChatViewModel(chatTitle: chat.historyTitle, messages: chat.historyMessages)
             ChatView(viewModel: viewModel)
         } label: {
             VStack(alignment: .leading, spacing: 8) {

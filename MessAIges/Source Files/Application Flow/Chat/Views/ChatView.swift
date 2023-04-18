@@ -28,18 +28,45 @@ struct ChatView: View {
                 .submitLabel(.send)
         }
         .padding(16)
+        .navigationTitle(viewModel.chatTitle ?? "")
+        .onDisappear(perform: viewModel.clearChatTitle)
         .toolbar {
-            Button {
-                let history = HistoryEntry(
-                    id: UUID(),
-                    title: "AAAAA\(UUID())",
-                    date: Date(),
-                    messages: viewModel.messages
-                )
-                HistoryManager().save(history: history)
-            } label: {
+            Button(action: showTitleTextFieldAlert) {
                 Image(systemName: "square.and.arrow.down")
             }
+        }
+    }
+
+    private func showTitleTextFieldAlert() {
+        let alert = AlertFactory.createAlertController(
+            title: "Please, provide a title summarizing your conversation",
+            message: "e.g. a topic of your first message",
+            configuration: setupTextFieldAlert
+        )
+        AlertFactory.presentAlertController(alert)
+    }
+
+    private func setupTextFieldAlert(in alertController: UIAlertController) {
+        setupAlertTextField(in: alertController)
+        setupAlertAction(in: alertController)
+    }
+
+    private func setupAlertAction(in alertController: UIAlertController) {
+        let action = UIAlertAction(
+            title: "Done",
+            style: .default
+        ) { _ in
+            viewModel.saveChatToHistory()
+        }
+        alertController.addAction(action)
+    }
+
+    private func setupAlertTextField(in alertController: UIAlertController) {
+        alertController.addTextField { textField in
+            viewModel.cancellables = NotificationCenter.default
+                .publisher(for: UITextField.textDidChangeNotification, object: textField)
+                .map { ($0.object as? UITextField)?.text }
+                .assign(to: \.viewModel.chatTitle, on: self)
         }
     }
 }
