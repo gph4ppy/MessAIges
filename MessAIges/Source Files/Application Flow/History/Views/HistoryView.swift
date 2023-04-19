@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwipeActions
 
 struct HistoryView: View {
     @StateObject var viewModel: HistoryViewModel = HistoryViewModel()
@@ -15,14 +16,13 @@ struct HistoryView: View {
             if viewModel.chats.isEmpty {
                 NoDataLabel(text: "No chats found - please, tap on the plus icon in the upper right corner")
             } else {
-                List {
-                    ForEach(viewModel.chats, id: \.historyID, content: createHistoryRow).onDelete {
-                        viewModel.removeHistory(at: $0)
-                    }
+                ScrollView {
+                    ForEach(viewModel.chats, id: \.historyID, content: createHistoryRow)
                 }
             }
         }
         .onAppear(perform: viewModel.fetchHistory)
+        .navigationTitle("MessAIges")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
@@ -34,14 +34,34 @@ struct HistoryView: View {
         }
     }
 
+    /// This method creates a row presenting a saved history.
+    /// - Parameter chat: A history object containing conversation data.
+    /// - Returns: A row used in the list of saved histories.
     private func createHistoryRow(of chat: History) -> some View {
         NavigationLink {
             let viewModel = ChatViewModel(chatTitle: chat.historyTitle, messages: chat.historyMessages)
             ChatView(viewModel: viewModel)
         } label: {
-            VStack(alignment: .leading, spacing: 8) {
-                Text(chat.historyTitle).bold()
-                Text(chat.historyDate.toString())
+            SwipeView {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(chat.historyTitle).bold()
+                    Text(chat.historyDate.toString())
+                    Divider()
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 4)
+                .foregroundColor(.primary)
+                .contentShape(Rectangle())
+            } trailingActions: { _ in
+                SwipeAction {
+                    viewModel.removeHistory(chat)
+                } label: { _ in
+                    Image(systemName: "trash")
+                        .foregroundColor(.white)
+                } background: { _ in
+                    Color.red
+                }
+                .allowSwipeToTrigger()
             }
         }
     }

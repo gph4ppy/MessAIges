@@ -32,7 +32,7 @@ struct ChatBubble: View {
     // TODO: - Think where I can move it
     private var direction: ChatBubbleShape.Direction {
         switch author {
-        case .chat:
+        case .chat, .unknown:
             return .left
         case .user:
             return .right

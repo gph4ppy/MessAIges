@@ -55,7 +55,7 @@ final class ChatViewModel: ObservableObject {
     }
 
     private func storeUserMessage() {
-        let userMessage = Message(author: .user, text: query, date: Date())
+        let userMessage = MessageEntry(author: .user, text: query, date: Date())
         messages.append(userMessage)
     }
 
@@ -63,7 +63,7 @@ final class ChatViewModel: ObservableObject {
         Task(priority: .userInitiated) {
             await apiService.sendMessage(text: query) { [weak self] response in
                 guard let self else { return }
-                let chatMessage = Message(author: .chat, text: response, date: Date())
+                let chatMessage = MessageEntry(author: .chat, text: response, date: Date())
                 self.messages.append(chatMessage)
                 self.clearQuery()
             }

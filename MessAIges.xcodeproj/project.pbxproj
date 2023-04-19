@@ -16,7 +16,7 @@
 		1C6335FD29DB583500AFEFDB /* MessAIgesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6335FC29DB583500AFEFDB /* MessAIgesUITestsLaunchTests.swift */; };
 		1C6D788329DB639300DC13DF /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788229DB639300DC13DF /* HistoryViewModel.swift */; };
 		1C6D788729DB642000DC13DF /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788629DB642000DC13DF /* HistoryEntry.swift */; };
-		1C6D788A29DB654300DC13DF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788929DB654300DC13DF /* Message.swift */; };
+		1C6D788A29DB654300DC13DF /* MessageEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788929DB654300DC13DF /* MessageEntry.swift */; };
 		1C6D788C29DB658E00DC13DF /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788B29DB658E00DC13DF /* Author.swift */; };
 		1C6D788E29DB668000DC13DF /* Authors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D788D29DB668000DC13DF /* Authors.swift */; };
 		1C6D789329DB670C00DC13DF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789229DB670C00DC13DF /* ChatView.swift */; };
@@ -28,6 +28,7 @@
 		1C83A97029DCC85D00A651DC /* ApplicationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A96F29DCC85D00A651DC /* ApplicationServices.swift */; };
 		1C83A97229DCC88500A651DC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A97129DCC88500A651DC /* APIService.swift */; };
 		1C85B3C829EF1796000A67DB /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3C729EF1796000A67DB /* AlertFactory.swift */; };
+		1C85B3CB29EF2251000A67DB /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 1C85B3CA29EF2251000A67DB /* SwipeActions */; };
 		1C9D440B29EC564B00992ABD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D440A29EC564B00992ABD /* DateExtension.swift */; };
 		1C9D440E29EC575400992ABD /* NoDataLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D440D29EC575400992ABD /* NoDataLabel.swift */; };
 		1C9D441029EC7B7400992ABD /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D440F29EC7B7400992ABD /* HistoryManager.swift */; };
@@ -72,7 +73,7 @@
 		1C6D788029DB600800DC13DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C6D788229DB639300DC13DF /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		1C6D788629DB642000DC13DF /* HistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
-		1C6D788929DB654300DC13DF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1C6D788929DB654300DC13DF /* MessageEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEntry.swift; sourceTree = "<group>"; };
 		1C6D788B29DB658E00DC13DF /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		1C6D788D29DB668000DC13DF /* Authors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authors.swift; sourceTree = "<group>"; };
 		1C6D789229DB670C00DC13DF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C6D78A029DB759D00DC13DF /* ChatGPTSwift in Frameworks */,
+				1C85B3CB29EF2251000A67DB /* SwipeActions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				1C83A97329DCC93400A651DC /* Services */,
-				1C6D788929DB654300DC13DF /* Message.swift */,
 				1C6D788B29DB658E00DC13DF /* Author.swift */,
 				1C6D788D29DB668000DC13DF /* Authors.swift */,
 				1C85B3C729EF1796000A67DB /* AlertFactory.swift */,
@@ -312,6 +313,7 @@
 		1C6D789B29DB6F2E00DC13DF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1C6D788929DB654300DC13DF /* MessageEntry.swift */,
 				1C6D789C29DB6F3600DC13DF /* BubbleStyling.swift */,
 			);
 			path = Models;
@@ -389,6 +391,7 @@
 			name = MessAIges;
 			packageProductDependencies = (
 				1C6D789F29DB759D00DC13DF /* ChatGPTSwift */,
+				1C85B3CA29EF2251000A67DB /* SwipeActions */,
 			);
 			productName = MessAIges;
 			productReference = 1C6335DC29DB583400AFEFDB /* MessAIges.app */;
@@ -465,6 +468,7 @@
 			packageReferences = (
 				1C6D789629DB679700DC13DF /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 				1C6D789E29DB759D00DC13DF /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
+				1C85B3C929EF2251000A67DB /* XCRemoteSwiftPackageReference "SwipeActions" */,
 			);
 			productRefGroup = 1C6335DD29DB583400AFEFDB /* Products */;
 			projectDirPath = "";
@@ -545,7 +549,7 @@
 				1C9D441429EC7BB100992ABD /* DataManagerProtocol.swift in Sources */,
 				1C6D789329DB670C00DC13DF /* ChatView.swift in Sources */,
 				1CDBA0A129DE3B5900FD7ADC /* MessagesEntity+CoreData.swift in Sources */,
-				1C6D788A29DB654300DC13DF /* Message.swift in Sources */,
+				1C6D788A29DB654300DC13DF /* MessageEntry.swift in Sources */,
 				1C9D440E29EC575400992ABD /* NoDataLabel.swift in Sources */,
 				1C9D441229EC7B9B00992ABD /* HistoryManagerProtocol+DataManager.swift in Sources */,
 				1C83A97229DCC88500A651DC /* APIService.swift in Sources */,
@@ -903,6 +907,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		1C85B3C929EF2251000A67DB /* XCRemoteSwiftPackageReference "SwipeActions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aheze/SwipeActions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -910,6 +922,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C6D789E29DB759D00DC13DF /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
 			productName = ChatGPTSwift;
+		};
+		1C85B3CA29EF2251000A67DB /* SwipeActions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C85B3C929EF2251000A67DB /* XCRemoteSwiftPackageReference "SwipeActions" */;
+			productName = SwipeActions;
 		};
 /* End XCSwiftPackageProductDependency section */
 

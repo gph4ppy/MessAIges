@@ -17,6 +17,25 @@ public class MessagesEntity: NSManagedObject {
 
     @NSManaged public var text: String?
     @NSManaged public var date: Date?
+    @NSManaged public var author: String?
     @NSManaged public var id: UUID?
     @NSManaged public var history: HistoryEntity?
+}
+
+extension MessagesEntity: Message {
+    var messageAuthor: Authors {
+        Authors(from: author ?? "")
+    }
+
+    var messageText: String {
+        text ?? ""
+    }
+
+    var messageDate: Date {
+        date ?? Date()
+    }
+
+    var messageID: UUID {
+        id ?? UUID()
+    }
 }

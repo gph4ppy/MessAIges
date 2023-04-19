@@ -16,8 +16,8 @@ struct ChatView: View {
                 NoDataLabel(text: "Welcome in a new chat! Please, type a message in a TextField below.")
             } else {
                 ScrollView {
-                    ForEach(viewModel.messages) { message in
-                        ChatBubble(message: message.text, author: message.author)
+                    ForEach(viewModel.messages, id: \.messageID) { message in
+                        ChatBubble(message: message.messageText, author: message.messageAuthor)
                     }
                 }
             }
@@ -29,6 +29,7 @@ struct ChatView: View {
         }
         .padding(16)
         .navigationTitle(viewModel.chatTitle ?? "")
+        .navigationBarTitleDisplayMode(.inline)
         .onDisappear(perform: viewModel.clearChatTitle)
         .toolbar {
             Button(action: showTitleTextFieldAlert) {
