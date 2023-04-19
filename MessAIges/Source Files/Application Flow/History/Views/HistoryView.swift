@@ -9,7 +9,7 @@ import SwiftUI
 import SwipeActions
 
 struct HistoryView: View {
-    @StateObject var viewModel: HistoryViewModel = HistoryViewModel()
+    @ObservedObject var viewModel: HistoryViewModel
 
     var body: some View {
         Group {

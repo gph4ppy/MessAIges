@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ChatView: View {
-    @ObservedObject var viewModel: ChatViewModel
+    @StateObject var viewModel: ChatViewModel
 
     var body: some View {
         VStack {
             if viewModel.messages.isEmpty {
-                NoDataLabel(text: "Welcome in a new chat! Please, type a message in a TextField below.")
+                NoDataLabel(text: "Welcome in a new chat! Please, type a message in a TextField below")
             } else {
                 ScrollView {
                     ForEach(viewModel.messages, id: \.messageID) { message in
@@ -26,14 +26,17 @@ struct ChatView: View {
                 .textFieldStyle(.roundedBorder)
                 .onSubmit { viewModel.sendMessage() }
                 .submitLabel(.send)
+                .autocorrectionDisabled()
         }
         .padding(16)
         .navigationTitle(viewModel.chatTitle ?? "")
         .navigationBarTitleDisplayMode(.inline)
         .onDisappear(perform: viewModel.clearChatTitle)
         .toolbar {
-            Button(action: showTitleTextFieldAlert) {
-                Image(systemName: "square.and.arrow.down")
+            if !viewModel.messages.isEmpty {
+                Button(action: showTitleTextFieldAlert) {
+                    Image(systemName: "square.and.arrow.down")
+                }
             }
         }
     }
