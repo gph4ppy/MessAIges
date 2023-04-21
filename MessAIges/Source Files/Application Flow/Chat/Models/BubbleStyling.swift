@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// An object which contains all the data related to bubble styling.
 struct BubbleStyling {
     var color: Color
     var paddingEdge: Edge.Set

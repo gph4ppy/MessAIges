@@ -7,11 +7,14 @@
 
 import Foundation
 
+/// A model used for determining who is the author of the message.
 enum Authors {
     case chat
     case user
     case unknown
 
+    /// A model used for determining who is the author of the message, created from the provided name.
+    /// - Parameter name: Name of the author typed as string.
     init(from name: String) {
         switch name {
         case Authors.chat.data.name:
@@ -23,6 +26,7 @@ enum Authors {
         }
     }
 
+    /// A property containing all the data about the message author.
     var data: Author {
         switch self {
         case .chat:
@@ -34,6 +38,7 @@ enum Authors {
         }
     }
 
+    /// A property containing all the styling data.
     var bubbleStyling: BubbleStyling {
         switch self {
         case .chat:

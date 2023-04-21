@@ -8,12 +8,17 @@
 import Foundation
 
 protocol Message {
+    /// A property storing message author.
     var messageAuthor: Authors { get }
+    /// A property storing message text.
     var messageText: String { get }
+    /// A property storing date when message has been sent.
     var messageDate: Date { get }
+    /// A property storing message identifier.
     var messageID: UUID { get }
 }
 
+/// An object containing all the message data.
 struct MessageEntry {
     let author: Authors
     let text: String
@@ -21,6 +26,7 @@ struct MessageEntry {
     let id: UUID = UUID()
 }
 
+// MARK: - MessageEntry+Message extension
 extension MessageEntry: Message {
     var messageAuthor: Authors {
         author

@@ -8,8 +8,13 @@
 import Foundation
 
 protocol HistoryManagerProtocol: DataManager {
+    /// This method fetches all the saved chat histories from local storage.
     func fetch() -> [HistoryEntity]
+    /// This method saves the provided HistoryEntity to the local storage.
+    /// - Parameter history: An object containing all the history data.
     func save(history: History)
+    /// This method removes the provided HistoryEntity from the local storage.
+    /// - Parameter history: An object containing all the history data.
     func remove(history: HistoryEntity)
 }
 

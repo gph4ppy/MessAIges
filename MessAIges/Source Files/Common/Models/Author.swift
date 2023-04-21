@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An object which contains all the data about the message author.
 struct Author {
     let name: String
 }

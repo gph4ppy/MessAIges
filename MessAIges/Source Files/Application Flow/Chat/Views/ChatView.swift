@@ -41,6 +41,7 @@ struct ChatView: View {
         }
     }
 
+    /// This method shows the saving alert on the screen.
     private func showTitleTextFieldAlert() {
         let alert = AlertFactory.createAlertController(
             title: "Please, provide a title summarizing your conversation",
@@ -50,11 +51,15 @@ struct ChatView: View {
         AlertFactory.presentAlertController(alert)
     }
 
+    /// This method setups the TextField Alert.
+    /// - Parameter alertController: An alert controller meant to be set up.
     private func setupTextFieldAlert(in alertController: UIAlertController) {
         setupAlertTextField(in: alertController)
         setupAlertAction(in: alertController)
     }
 
+    /// This method setups the `Done` alert action.
+    /// - Parameter alertController: An alert controller to which an action will be added.
     private func setupAlertAction(in alertController: UIAlertController) {
         let action = UIAlertAction(
             title: "Done",
@@ -65,6 +70,8 @@ struct ChatView: View {
         alertController.addAction(action)
     }
 
+    /// This method setups the text field in the alert controller.
+    /// - Parameter alertController: An alert controller to which the text field will be added.
     private func setupAlertTextField(in alertController: UIAlertController) {
         alertController.addTextField { textField in
             viewModel.cancellables = NotificationCenter.default

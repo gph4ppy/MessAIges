@@ -9,12 +9,21 @@ import Foundation
 
 @MainActor
 final class HistoryViewModel: ObservableObject {
+
+    // MARK: - Properties
+
     /// An array of saved chats used as a data source.
     @Published var chats: [History]
+
+    // MARK: - Services
+
     /// A manager responsible for performing the actions related to the history.
     private(set) var historyManager: HistoryManagerProtocol
 
     /// A ViewModel used across the views related to History.
+    /// - Parameters:
+    ///   - chats: An array of saved chats used as a data source.
+    ///   - historyManager: A manager responsible for performing the actions related to the history.
     init(
         chats: [History] = [],
         historyManager: HistoryManagerProtocol = ApplicationServices.shared.historyManager

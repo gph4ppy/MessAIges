@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ChatBubble: View {
+    /// A property containing the message displayed in the bubble.
     let message: String
+    /// A property containing the author of the message.
     let author: Authors
 
     var body: some View {
@@ -29,7 +31,7 @@ struct ChatBubble: View {
         .padding(author.bubbleStyling.paddingEdge, 32)
     }
 
-    // TODO: - Think where I can move it
+    /// A property containing direction of the chat bubble.
     private var direction: ChatBubbleShape.Direction {
         switch author {
         case .chat, .unknown:
@@ -37,11 +39,5 @@ struct ChatBubble: View {
         case .user:
             return .right
         }
-    }
-}
-
-struct UserChatBubble_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatBubble(message: "Test", author: .chat)
     }
 }
