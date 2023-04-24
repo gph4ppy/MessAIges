@@ -19,6 +19,12 @@ final class ChatViewModelTests: XCTestCase {
         sut = ChatViewModel(apiService: apiService, historyManager: historyManager)
     }
 
+    override func tearDownWithError() throws {
+        historyManager = nil
+        sut = nil
+        try super.tearDownWithError()
+    }
+
     @MainActor func test_sendMessage_success() {
         let messageText = "test"
         sut.query = messageText

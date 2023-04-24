@@ -30,6 +30,9 @@
 		1C85B3D929F6FE7C000A67DB /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3D829F6FE7C000A67DB /* ChatViewModelTests.swift */; };
 		1C85B3DC29F705FF000A67DB /* MockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3DB29F705FF000A67DB /* MockHelper.swift */; };
 		1C85B3DE29F7062F000A67DB /* HistoryManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3DD29F7062F000A67DB /* HistoryManagerMock.swift */; };
+		1C85B3E129F706BD000A67DB /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 1C85B3E029F706BD000A67DB /* SnapshotTesting */; };
+		1C85B3E329F706C7000A67DB /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3E229F706C7000A67DB /* ViewExtension.swift */; };
+		1C85B3E529F707EB000A67DB /* HistoryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3E429F707EB000A67DB /* HistoryViewTests.swift */; };
 		1C9D440B29EC564B00992ABD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D440A29EC564B00992ABD /* DateExtension.swift */; };
 		1C9D440E29EC575400992ABD /* NoDataLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D440D29EC575400992ABD /* NoDataLabel.swift */; };
 		1C9D441029EC7B7400992ABD /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D440F29EC7B7400992ABD /* HistoryManager.swift */; };
@@ -79,6 +82,8 @@
 		1C85B3D829F6FE7C000A67DB /* ChatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModelTests.swift; sourceTree = "<group>"; };
 		1C85B3DB29F705FF000A67DB /* MockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHelper.swift; sourceTree = "<group>"; };
 		1C85B3DD29F7062F000A67DB /* HistoryManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManagerMock.swift; sourceTree = "<group>"; };
+		1C85B3E229F706C7000A67DB /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		1C85B3E429F707EB000A67DB /* HistoryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewTests.swift; sourceTree = "<group>"; };
 		1C9D440A29EC564B00992ABD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		1C9D440D29EC575400992ABD /* NoDataLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataLabel.swift; sourceTree = "<group>"; };
 		1C9D440F29EC7B7400992ABD /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C85B3E129F706BD000A67DB /* SnapshotTesting in Frameworks */,
 				1C6D78A029DB759D00DC13DF /* ChatGPTSwift in Frameworks */,
 				1C85B3CB29EF2251000A67DB /* SwipeActions in Frameworks */,
 			);
@@ -328,6 +334,8 @@
 		1C85B3CD29F6F140000A67DB /* Snapshot Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1C85B3E229F706C7000A67DB /* ViewExtension.swift */,
+				1C85B3E429F707EB000A67DB /* HistoryViewTests.swift */,
 			);
 			path = "Snapshot Tests";
 			sourceTree = "<group>";
@@ -397,6 +405,7 @@
 			packageProductDependencies = (
 				1C6D789F29DB759D00DC13DF /* ChatGPTSwift */,
 				1C85B3CA29EF2251000A67DB /* SwipeActions */,
+				1C85B3E029F706BD000A67DB /* SnapshotTesting */,
 			);
 			productName = MessAIges;
 			productReference = 1C6335DC29DB583400AFEFDB /* MessAIges.app */;
@@ -453,6 +462,7 @@
 				1C6D789629DB679700DC13DF /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 				1C6D789E29DB759D00DC13DF /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
 				1C85B3C929EF2251000A67DB /* XCRemoteSwiftPackageReference "SwipeActions" */,
+				1C85B3DF29F706BD000A67DB /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 1C6335DD29DB583400AFEFDB /* Products */;
 			projectDirPath = "";
@@ -544,6 +554,8 @@
 			files = (
 				1C85B3DC29F705FF000A67DB /* MockHelper.swift in Sources */,
 				1C85B3D529F6FB42000A67DB /* APIServiceMock.swift in Sources */,
+				1C85B3E329F706C7000A67DB /* ViewExtension.swift in Sources */,
+				1C85B3E529F707EB000A67DB /* HistoryViewTests.swift in Sources */,
 				1C85B3DE29F7062F000A67DB /* HistoryManagerMock.swift in Sources */,
 				1C85B3D929F6FE7C000A67DB /* ChatViewModelTests.swift in Sources */,
 			);
@@ -686,6 +698,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MessAIges/Preview Content\"";
 				DEVELOPMENT_TEAM = G6NTB33VYZ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MessAIges/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -717,6 +730,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MessAIges/Preview Content\"";
 				DEVELOPMENT_TEAM = G6NTB33VYZ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MessAIges/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -838,6 +852,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		1C85B3DF29F706BD000A67DB /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -850,6 +872,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C85B3C929EF2251000A67DB /* XCRemoteSwiftPackageReference "SwipeActions" */;
 			productName = SwipeActions;
+		};
+		1C85B3E029F706BD000A67DB /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C85B3DF29F706BD000A67DB /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 
