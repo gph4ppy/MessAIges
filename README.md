@@ -19,6 +19,7 @@ MessAIgess is an app which combines the logic of ChatGPT and some UI parts from 
 - Combine
 - [ChatGPTSwift](https://github.com/alfianlosari/ChatGPTSwift)
 - [SwipeActions](https://github.com/aheze/SwipeActions)
+- [SnapshotTesting](https://github.com/pointfreeco/swift-snapshot-testing)
 
 ## Features
 - Write messages with artificial intelligence.
