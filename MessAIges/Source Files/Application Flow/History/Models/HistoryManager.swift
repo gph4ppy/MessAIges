@@ -8,10 +8,10 @@
 import Foundation
 
 /// An object responsible for performing the actions related to the history.
-final class HistoryManager: HistoryManagerProtocol {
+class HistoryManager: HistoryManagerProtocol {
     /// This method fetches the history entities from the local storage.
     /// - Returns: An array of all saved histories.
-    func fetch() -> [HistoryEntity] {
+    func fetch() -> [History] {
         let request = HistoryEntity.fetchRequest()
         return PersistenceManager.shared.fetchData(request: request)
     }

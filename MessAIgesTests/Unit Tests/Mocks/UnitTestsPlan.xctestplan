@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "4B319783-2874-4EBC-9E8E-0D3668B9A490",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MessAIges.xcodeproj",
+        "identifier" : "1C6335EB29DB583500AFEFDB",
+        "name" : "MessAIgesTests"
+      }
+    }
+  ],
+  "version" : 1
+}

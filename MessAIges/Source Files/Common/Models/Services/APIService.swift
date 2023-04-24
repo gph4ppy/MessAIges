@@ -14,7 +14,7 @@ protocol APIServiceProtocol {
     func sendMessage(text: String, completion: @escaping (_ response: String) -> Void) async
 }
 
-final class APIService: APIServiceProtocol {
+class APIService: APIServiceProtocol {
     /// A property storing a GPT client used for performing api calls.
     var client: ChatGPTAPI?
 

@@ -54,6 +54,7 @@ final class ChatViewModel: ObservableObject {
     /// This method sends user's message and stores it.
     /// After receiving a response, it is also added to the `messages` array.
     func sendMessage() {
+        guard !query.isEmpty else { return }
         storeUserMessage()
         storeChatMessage()
         clearQuery()
