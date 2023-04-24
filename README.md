@@ -40,5 +40,5 @@ git update-index --assume-unchanged MessAIges/Supporting\ Files/APIKeys.xcconfig
 Project is: _in progress_.
 
 ## TODO:
-- Clear the message text after sending it, not after receiving the response from AI.
 - Implement editing the saved chat (e.g. adding more messages, changing name, etc.).
+- Implement rest of unit and snapshot tests.
