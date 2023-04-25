@@ -23,6 +23,7 @@
 		1C7C39EC29F83CBB00F740CF /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7C39EB29F83CBB00F740CF /* SwipeActions */; };
 		1C7C39EE29F83CCB00F740CF /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7C39ED29F83CCB00F740CF /* ChatGPTSwift */; };
 		1C7C39F229F83CF500F740CF /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7C39F129F83CF500F740CF /* SnapshotTesting */; };
+		1C7C39F429F83F1900F740CF /* HistoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C39F329F83F1900F740CF /* HistoryViewModelTests.swift */; };
 		1C83A96E29DCC6AC00A651DC /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A96D29DCC6AC00A651DC /* ChatBubbleShape.swift */; };
 		1C83A97029DCC85D00A651DC /* ApplicationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A96F29DCC85D00A651DC /* ApplicationServices.swift */; };
 		1C83A97229DCC88500A651DC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A97129DCC88500A651DC /* APIService.swift */; };
@@ -74,6 +75,7 @@
 		1C6D789429DB673200DC13DF /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		1C6D789929DB6AB400DC13DF /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		1C6D789C29DB6F3600DC13DF /* BubbleStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStyling.swift; sourceTree = "<group>"; };
+		1C7C39F329F83F1900F740CF /* HistoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModelTests.swift; sourceTree = "<group>"; };
 		1C83A96D29DCC6AC00A651DC /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		1C83A96F29DCC85D00A651DC /* ApplicationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServices.swift; sourceTree = "<group>"; };
 		1C83A97129DCC88500A651DC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				1C85B3D729F6FD17000A67DB /* UnitTestsPlan.xctestplan */,
 				1C85B3DB29F705FF000A67DB /* MockHelper.swift */,
 				1C85B3D329F6FB36000A67DB /* Mocks */,
+				1C7C39F329F83F1900F740CF /* HistoryViewModelTests.swift */,
 				1C85B3D829F6FE7C000A67DB /* ChatViewModelTests.swift */,
 			);
 			path = "Unit Tests";
@@ -564,6 +567,7 @@
 				1C85B3E529F707EB000A67DB /* HistoryViewTests.swift in Sources */,
 				1C85B3DE29F7062F000A67DB /* HistoryManagerMock.swift in Sources */,
 				1C85B3D929F6FE7C000A67DB /* ChatViewModelTests.swift in Sources */,
+				1C7C39F429F83F1900F740CF /* HistoryViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
