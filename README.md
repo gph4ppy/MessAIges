@@ -11,7 +11,7 @@ A Messages-like app using GPT API.
 * [TODO](#todo)
 
 ## General Information
-MessAIgess is an app which combines the logic of ChatGPT and some UI parts from native Messages app for iOS. Thanks to it, the user has a feeling like he or she is writing messages with the artificial inteligence. Current project test coverage: 75.0%.
+MessAIgess is an app which combines the logic of ChatGPT and some UI parts from native Messages app for iOS. Thanks to it, the user has a feeling like he or she is writing messages with the artificial intelligence. Current project test coverage: 75.0%.
 
 ## Technologies Used
 - SwiftUI
