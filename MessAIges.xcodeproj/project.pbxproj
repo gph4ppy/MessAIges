@@ -38,6 +38,7 @@
 		1C9D441029EC7B7400992ABD /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D440F29EC7B7400992ABD /* HistoryManager.swift */; };
 		1C9D441229EC7B9B00992ABD /* HistoryManagerProtocol+DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D441129EC7B9B00992ABD /* HistoryManagerProtocol+DataManager.swift */; };
 		1C9D441429EC7BB100992ABD /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D441329EC7BB100992ABD /* DataManagerProtocol.swift */; };
+		1CD9CEAC29F836E200D3E8C1 /* ChatViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9CEAB29F836E200D3E8C1 /* ChatViewTests.swift */; };
 		1CDBA08B29DE346900FD7ADC /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBA08A29DE346900FD7ADC /* PersistenceManager.swift */; };
 		1CDBA08D29DE362500FD7ADC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBA08C29DE362500FD7ADC /* Application.swift */; };
 		1CDBA09129DE36D700FD7ADC /* MessAIges.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBA08F29DE36D700FD7ADC /* MessAIges.xcdatamodeld */; };
@@ -89,6 +90,7 @@
 		1C9D440F29EC7B7400992ABD /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
 		1C9D441129EC7B9B00992ABD /* HistoryManagerProtocol+DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryManagerProtocol+DataManager.swift"; sourceTree = "<group>"; };
 		1C9D441329EC7BB100992ABD /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
+		1CD9CEAB29F836E200D3E8C1 /* ChatViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewTests.swift; sourceTree = "<group>"; };
 		1CDBA08A29DE346900FD7ADC /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		1CDBA08C29DE362500FD7ADC /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		1CDBA09029DE36D700FD7ADC /* MessAIges.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MessAIges.xcdatamodel; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			children = (
 				1C85B3E229F706C7000A67DB /* ViewExtension.swift */,
 				1C85B3E429F707EB000A67DB /* HistoryViewTests.swift */,
+				1CD9CEAB29F836E200D3E8C1 /* ChatViewTests.swift */,
 			);
 			path = "Snapshot Tests";
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD9CEAC29F836E200D3E8C1 /* ChatViewTests.swift in Sources */,
 				1C85B3DC29F705FF000A67DB /* MockHelper.swift in Sources */,
 				1C85B3D529F6FB42000A67DB /* APIServiceMock.swift in Sources */,
 				1C85B3E329F706C7000A67DB /* ViewExtension.swift in Sources */,

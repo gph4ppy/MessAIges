@@ -21,6 +21,7 @@ final class HistoryViewTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
+        historyManager = nil
         viewModel = nil
         sut = nil
         try super.tearDownWithError()
