@@ -20,17 +20,17 @@
 		1C6D789529DB673200DC13DF /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789429DB673200DC13DF /* ChatViewModel.swift */; };
 		1C6D789A29DB6AB400DC13DF /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789929DB6AB400DC13DF /* ChatBubble.swift */; };
 		1C6D789D29DB6F3600DC13DF /* BubbleStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6D789C29DB6F3600DC13DF /* BubbleStyling.swift */; };
-		1C6D78A029DB759D00DC13DF /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C6D789F29DB759D00DC13DF /* ChatGPTSwift */; };
+		1C7C39EC29F83CBB00F740CF /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7C39EB29F83CBB00F740CF /* SwipeActions */; };
+		1C7C39EE29F83CCB00F740CF /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7C39ED29F83CCB00F740CF /* ChatGPTSwift */; };
+		1C7C39F229F83CF500F740CF /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7C39F129F83CF500F740CF /* SnapshotTesting */; };
 		1C83A96E29DCC6AC00A651DC /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A96D29DCC6AC00A651DC /* ChatBubbleShape.swift */; };
 		1C83A97029DCC85D00A651DC /* ApplicationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A96F29DCC85D00A651DC /* ApplicationServices.swift */; };
 		1C83A97229DCC88500A651DC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A97129DCC88500A651DC /* APIService.swift */; };
 		1C85B3C829EF1796000A67DB /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3C729EF1796000A67DB /* AlertFactory.swift */; };
-		1C85B3CB29EF2251000A67DB /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 1C85B3CA29EF2251000A67DB /* SwipeActions */; };
 		1C85B3D529F6FB42000A67DB /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3D429F6FB42000A67DB /* APIServiceMock.swift */; };
 		1C85B3D929F6FE7C000A67DB /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3D829F6FE7C000A67DB /* ChatViewModelTests.swift */; };
 		1C85B3DC29F705FF000A67DB /* MockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3DB29F705FF000A67DB /* MockHelper.swift */; };
 		1C85B3DE29F7062F000A67DB /* HistoryManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3DD29F7062F000A67DB /* HistoryManagerMock.swift */; };
-		1C85B3E129F706BD000A67DB /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 1C85B3E029F706BD000A67DB /* SnapshotTesting */; };
 		1C85B3E329F706C7000A67DB /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3E229F706C7000A67DB /* ViewExtension.swift */; };
 		1C85B3E529F707EB000A67DB /* HistoryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85B3E429F707EB000A67DB /* HistoryViewTests.swift */; };
 		1C9D440B29EC564B00992ABD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D440A29EC564B00992ABD /* DateExtension.swift */; };
@@ -103,9 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C85B3E129F706BD000A67DB /* SnapshotTesting in Frameworks */,
-				1C6D78A029DB759D00DC13DF /* ChatGPTSwift in Frameworks */,
-				1C85B3CB29EF2251000A67DB /* SwipeActions in Frameworks */,
+				1C7C39EE29F83CCB00F740CF /* ChatGPTSwift in Frameworks */,
+				1C7C39EC29F83CBB00F740CF /* SwipeActions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7C39F229F83CF500F740CF /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,9 +406,8 @@
 			);
 			name = MessAIges;
 			packageProductDependencies = (
-				1C6D789F29DB759D00DC13DF /* ChatGPTSwift */,
-				1C85B3CA29EF2251000A67DB /* SwipeActions */,
-				1C85B3E029F706BD000A67DB /* SnapshotTesting */,
+				1C7C39EB29F83CBB00F740CF /* SwipeActions */,
+				1C7C39ED29F83CCB00F740CF /* ChatGPTSwift */,
 			);
 			productName = MessAIges;
 			productReference = 1C6335DC29DB583400AFEFDB /* MessAIges.app */;
@@ -428,6 +427,9 @@
 				1C6335EE29DB583500AFEFDB /* PBXTargetDependency */,
 			);
 			name = MessAIgesTests;
+			packageProductDependencies = (
+				1C7C39F129F83CF500F740CF /* SnapshotTesting */,
+			);
 			productName = MessAIgesTests;
 			productReference = 1C6335EC29DB583500AFEFDB /* MessAIgesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -867,17 +869,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1C6D789F29DB759D00DC13DF /* ChatGPTSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C6D789E29DB759D00DC13DF /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
-			productName = ChatGPTSwift;
-		};
-		1C85B3CA29EF2251000A67DB /* SwipeActions */ = {
+		1C7C39EB29F83CBB00F740CF /* SwipeActions */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1C85B3C929EF2251000A67DB /* XCRemoteSwiftPackageReference "SwipeActions" */;
 			productName = SwipeActions;
 		};
-		1C85B3E029F706BD000A67DB /* SnapshotTesting */ = {
+		1C7C39ED29F83CCB00F740CF /* ChatGPTSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C6D789E29DB759D00DC13DF /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
+		};
+		1C7C39F129F83CF500F740CF /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1C85B3DF29F706BD000A67DB /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
